@@ -56,4 +56,111 @@ table {
 html, body {
     height: 100%;
 }
+@bluecolor:rgb(189, 202, 238);
+.flexspace(){
+	display:flex;
+	justify-content: space-between;
+}
+.flexcolumn(){
+	display:flex;
+	flex-direction: column;
+}
 
+
+body{
+	margin: 0 5%;
+}
+
+nav{
+	.flexspace();
+	font-size: 125%;
+}
+
+header{
+	.flexcolumn();
+	margin: 2% 0;
+	padding: 5% 2%;
+	background-color: @bluecolor;
+	img{
+		width:25%;
+		height:25%;
+	}
+	h1{
+		font-size:400%;
+		padding: 1% 0;
+	}
+	.tech{
+		border-bottom: solid 1px gray;
+		padding-bottom: 1%;
+	}
+	.occasionally{
+		padding: 1% 0;
+	}
+	div p{
+		display: inline-block;
+		border: solid 1px black;
+		background-color: gray;
+		padding: .5%;
+		border-radius: 5px;
+
+	}
+}
+.top-section{
+	.flexspace();
+	
+	@media(max-width:500px){
+		flex-flow:column;
+	}
+	div{
+		width:50%;
+		h2{
+			font-size: 200%;
+		}
+		@media(max-width:500px){
+			width: 100%;
+		}
+	}
+	.stuff{
+		.flexcolumn();
+		a{
+			border-style: solid solid none solid;
+			border-color: gray;
+			border-width: 1px;
+			padding: .8%;
+		}
+		.naps{
+			border-bottom: solid gray 1px;
+		}
+	}
+
+}
+.bottom-section{
+	h2{
+		font-size:200%;
+		margin: 0 0 1% 0;
+	}
+	th{
+		padding: .8%;
+	}
+	td{
+		text-align: center;
+		padding: .8%;
+	}
+	.first{
+		border-style: solid none;
+		border-color: gray;
+		border-width: 1px;
+	}
+	.second{
+		background-color: @bluecolor;
+	}
+	.fourth{
+		background-color: @bluecolor;
+	}
+}
+footer{
+	text-align: center;
+	background-color: gray;
+	margin: 1.4% 0 0 0;
+	padding: 2% 0;
+}
